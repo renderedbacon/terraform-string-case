@@ -4,3 +4,9 @@ repos:
     hooks:
       - id: check-merge-conflict
       - id: end-of-file-fixer
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: v0.16.0
+    hooks:
+      - id: terraform-docs-docker
+        args: ["--config", ".terraform-docs.yaml", "."]
+        pass_filenames: false

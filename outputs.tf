@@ -1,17 +1,17 @@
 locals {
-  lower   = lower(var.raw_input)
-  upper   = upper(var.raw_input)
+  lower   = lower(var.raw)
+  upper   = upper(var.raw)
   snake   = replace(replace(local.lower, " ", "_"), "-", "_")
   kebab   = replace(local.snake, "_", "-")
-  pascal  = replace(title(replace(replace(var.raw_input, "-", " "), "_", " ")), " ", "")
+  pascal  = replace(title(replace(replace(var.raw, "-", " "), "_", " ")), " ", "")
   camel   = "${lower(substr(local.pascal, 0, 1))}${substr(local.pascal, 1, -1)}"
-  title   = title(var.raw_input)
+  title   = title(var.raw)
   env_var = upper(local.snake)
 }
 
 output "raw" {
   description = "Raw case"
-  value       = var.raw_input
+  value       = var.raw
 }
 
 output "lower" {

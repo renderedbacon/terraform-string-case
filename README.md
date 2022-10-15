@@ -19,6 +19,7 @@ Terraform module to allow for string case transformations.
 
 | Name | Description |
 |------|-------------|
+| alpha\_num | AlphaNumCase |
 | camel | camelCase |
 | env\_var | ENV\_VAR\_CASE |
 | kebab | kebab-case |

@@ -60,7 +60,7 @@ def main():
 
     # write in pre-commit-config
     with open(config_path, "w") as config_file:
-        safe_dump(config, config_file)
+        safe_dump(config, config_file, sort_keys=False)
 
     # for module_path in module_paths:
     #     valid = is_valid_module(module_path)

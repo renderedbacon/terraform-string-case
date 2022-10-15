@@ -1,4 +1,4 @@
-# Terraform String Case
+# Terraform String Case - Raw
 
 Terraform module to allow for string case transformations.
 

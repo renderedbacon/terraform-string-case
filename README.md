@@ -1,4 +1,6 @@
-# terraform-module-string-case
+# Terraform String Case
+
+Terraform module to allow for string case transformations.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

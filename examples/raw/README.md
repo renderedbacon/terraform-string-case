@@ -17,14 +17,14 @@
 
 | Name | Description |
 |------|-------------|
-| alpha\_num | n/a |
-| camel | n/a |
-| env\_var | n/a |
-| kebab | n/a |
-| lower | n/a |
-| pascal | n/a |
-| raw | n/a |
-| snake | n/a |
-| title | n/a |
-| upper | n/a |
+| alpha\_num | AlphaNumCase |
+| camel | camelCase |
+| env\_var | ENV\_VAR\_CASE |
+| kebab | kebab-case |
+| lower | lower case |
+| pascal | PascalCase |
+| raw | Raw case |
+| snake | snake\_case |
+| title | Title Case |
+| upper | UPPER CASE |
 <!-- END_TF_DOCS -->

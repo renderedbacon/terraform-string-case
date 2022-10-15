@@ -20,20 +20,9 @@ def is_valid_module(module_path: Path) -> bool:
     return file_check
 
 
-def main():
-    parser = ArgumentParser(description="Find all the Modules and update .pre-commit-config.yaml to render tf docs.")
-    parser.add_argument("--root", type=str, default=".", help="Root directory to start searching from")
-    args = parser.parse_args()
-
-    root = Path(args.root)
-
-    # get list of validated modules
-    module_paths = list_module_paths(root)
-    valid_module_paths = [module_path for module_path in module_paths if is_valid_module(module_path)]
-
-    # generate tf-docs hooks for each module
+def generate_hooks_from_modules(module_paths: list[Path]):
     doc_hooks = []
-    for module_path in valid_module_paths:
+    for module_path in module_paths:
         module_path_str = str(module_path)
         hook = {
             "id": f"terraform-docs-docker",
@@ -47,6 +36,10 @@ def main():
         }
         doc_hooks.append(hook)
 
+    return doc_hooks
+
+
+def update_pre_commit_config(root: Path, doc_hooks):
     # read in pre-commit-config
     config_path = root / ".pre-commit-config.yaml"
     with open(config_path, "r") as config_file:
@@ -62,9 +55,23 @@ def main():
     with open(config_path, "w") as config_file:
         safe_dump(config, config_file, sort_keys=False)
 
-    # for module_path in module_paths:
-    #     valid = is_valid_module(module_path)
-    #     print(f"{str(module_path)}: {valid}")
+
+def main():
+    parser = ArgumentParser(description="Find all the Modules and update .pre-commit-config.yaml to render tf docs.")
+    parser.add_argument("--root", type=str, default=".", help="Root directory to start searching from")
+    args = parser.parse_args()
+
+    root = Path(args.root)
+
+    # get list of validated modules
+    module_paths = list_module_paths(root)
+    valid_module_paths = [module_path for module_path in module_paths if is_valid_module(module_path)]
+
+    # generate tf-docs hooks for each module
+    doc_hooks = generate_hooks_from_modules(valid_module_paths)
+
+    # update the hooks in the config file
+    update_pre_commit_config(root, doc_hooks)
 
     return 0
 

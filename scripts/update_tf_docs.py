@@ -3,7 +3,7 @@
 from argparse import ArgumentParser
 from pathlib import Path
 from module_dirs import list_module_paths
-from yaml import safe_load, safe_dump
+from ruamel.yaml import YAML
 
 
 def is_valid_module(module_path: Path) -> bool:
@@ -40,10 +40,12 @@ def generate_hooks_from_modules(module_paths: list[Path]):
 
 
 def update_pre_commit_config(root: Path, doc_hooks):
+    yaml = YAML(typ="rt")
+
     # read in pre-commit-config
     config_path = root / ".pre-commit-config.yaml"
     with open(config_path, "r") as config_file:
-        config = safe_load(config_file)
+        config = yaml.load(config_file)
 
     # update hooks by replacing all tf-docs hooks
     for repo in config["repos"]:
@@ -53,7 +55,8 @@ def update_pre_commit_config(root: Path, doc_hooks):
 
     # write in pre-commit-config
     with open(config_path, "w") as config_file:
-        safe_dump(config, config_file, sort_keys=False)
+        yaml.indent(mapping=2, sequence=4, offset=2)
+        yaml.dump(config, stream=config_file)
 
 
 def main():

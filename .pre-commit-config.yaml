@@ -1,50 +1,50 @@
 repos:
-- repo: https://github.com/bridgecrewio/checkov
-  rev: 2.1.269
-  hooks:
-  - id: checkov
-    name: checkov
-- repo: https://github.com/antonbabenko/pre-commit-terraform
-  rev: v1.76.0
-  hooks:
-  - id: terraform_fmt
-    name: terraform fmt
-- repo: https://github.com/terraform-docs/terraform-docs
-  rev: v0.16.0
-  hooks:
-  - id: terraform-docs-docker
-    name: terraform docs root
-    args:
-    - --config
-    - .terraform-docs.yaml
-    - .
-    pass_filenames: false
-  - id: terraform-docs-docker
-    name: terraform docs examples/kebab
-    args:
-    - --config
-    - .terraform-docs.yaml
-    - examples/kebab
-    pass_filenames: false
-  - id: terraform-docs-docker
-    name: terraform docs examples/raw
-    args:
-    - --config
-    - .terraform-docs.yaml
-    - examples/raw
-    pass_filenames: false
-  - id: terraform-docs-docker
-    name: terraform docs modules/input/kebab
-    args:
-    - --config
-    - .terraform-docs.yaml
-    - modules/input/kebab
-    pass_filenames: false
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.3.0
-  hooks:
-  - id: check-merge-conflict
-  - id: trailing-whitespace
-    args:
-    - --markdown-linebreak-ext=md
-  - id: end-of-file-fixer
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: 2.1.269
+    hooks:
+      - id: checkov
+        name: checkov
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.76.0
+    hooks:
+      - id: terraform_fmt
+        name: terraform fmt
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: v0.16.0
+    hooks:
+      - id: terraform-docs-docker
+        name: terraform docs root
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - .
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs examples/kebab
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - examples/kebab
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs examples/raw
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - examples/raw
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs modules/input/kebab
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - modules/input/kebab
+        pass_filenames: false
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+        args:
+          - --markdown-linebreak-ext=md
+      - id: end-of-file-fixer

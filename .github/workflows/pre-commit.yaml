@@ -20,6 +20,11 @@ jobs:
         id: min-max
         uses: clowdhaus/terraform-min-max@v1.1.1
 
+      - name: Install Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
       - name: Pre-commit Terraform ${{ steps['min-max'].outputs.maxVersion }}
         uses: clowdhaus/terraform-composite-actions/pre-commit@v1.6.0
         with:

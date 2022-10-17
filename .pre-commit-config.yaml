@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/renderedbacon/pre-commit-terraform-modules
-    rev: v1.0.1
+    rev: v1.0.2
     hooks:
       - id: copy-root-outputs
       - id: update-tf-docs

@@ -25,6 +25,20 @@ repos:
           - .
         pass_filenames: false
       - id: terraform-docs-docker
+        name: terraform docs examples/camel
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - examples/camel
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs examples/env_var
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - examples/env_var
+        pass_filenames: false
+      - id: terraform-docs-docker
         name: terraform docs examples/kebab
         args:
           - --config
@@ -32,11 +46,25 @@ repos:
           - examples/kebab
         pass_filenames: false
       - id: terraform-docs-docker
+        name: terraform docs examples/pascal
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - examples/pascal
+        pass_filenames: false
+      - id: terraform-docs-docker
         name: terraform docs examples/raw
         args:
           - --config
           - .terraform-docs.yaml
           - examples/raw
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs examples/snake
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - examples/snake
         pass_filenames: false
       - id: terraform-docs-docker
         name: terraform docs modules/input/camel

@@ -1,4 +1,4 @@
 module "case" {
   source = "../../modules/input/kebab"
-  kebab  = "simple-string-for-testing-in-github"
+  kebab  = "simple-string-for-testing"
 }

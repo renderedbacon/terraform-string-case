@@ -3,7 +3,7 @@ variable "env_var" {
   type        = string
 
   validation {
-    condition     = length(replace(var.env_var, "/[A-Z0-9_]/", "")) > 0
+    condition     = length(replace(var.env_var, "/[A-Z0-9_]/", "")) == 0
     error_message = "Invalid character(s) for env var case string.  Please use only uppercase, numbers, and underscores."
   }
 }

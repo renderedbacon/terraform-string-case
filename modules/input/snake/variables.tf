@@ -3,7 +3,7 @@ variable "snake" {
   type        = string
 
   validation {
-    condition     = length(replace(var.snake, "/[a-z0-9_]/", "")) > 0
+    condition     = length(replace(var.snake, "/[a-z0-9_]/", "")) == 0
     error_message = "Invalid character(s) for snake case string.  Please use only lowercase, numbers, and underscores."
   }
 }

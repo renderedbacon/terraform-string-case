@@ -1,6 +1,4 @@
-# Terraform String Case - Raw
-
-Terraform module to allow for string case transformations.
+# Terraform String Case - Camel
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -9,11 +7,17 @@ Terraform module to allow for string case transformations.
 |------|---------|
 | terraform | >= 1.1 |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| case | ../../../ | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| raw | Raw input string.  Raw formatted string must be space delimited and capitalization will be preserved if possible. | `string` | n/a | yes |
+| camel | Camel input string.  Conversion assumes all case changes are separate words.  Will title case all words during conversion. | `string` | n/a | yes |
 
 ## Outputs
 

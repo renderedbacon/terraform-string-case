@@ -1,6 +1,4 @@
-# Terraform String Case - Raw
-
-Terraform module to allow for string case transformations.
+# Terraform String Case - Env-Var Usage
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -9,11 +7,11 @@ Terraform module to allow for string case transformations.
 |------|---------|
 | terraform | >= 1.1 |
 
-## Inputs
+## Modules
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| raw | Raw input string.  Raw formatted string must be space delimited and capitalization will be preserved if possible. | `string` | n/a | yes |
+| Name | Source | Version |
+|------|--------|---------|
+| case | ../../modules/input/env_var | n/a |
 
 ## Outputs
 

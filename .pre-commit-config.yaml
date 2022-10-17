@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/renderedbacon/pre-commit-terraform-modules
-    rev: v1.0.2
+    rev: v1.0.3
     hooks:
       - id: copy-root-outputs
       - id: update-tf-docs
@@ -39,20 +39,6 @@ repos:
           - examples/raw
         pass_filenames: false
       - id: terraform-docs-docker
-        name: terraform docs modules/input/pascal
-        args:
-          - --config
-          - .terraform-docs.yaml
-          - modules/input/pascal
-        pass_filenames: false
-      - id: terraform-docs-docker
-        name: terraform docs modules/input/kebab
-        args:
-          - --config
-          - .terraform-docs.yaml
-          - modules/input/kebab
-        pass_filenames: false
-      - id: terraform-docs-docker
         name: terraform docs modules/input/camel
         args:
           - --config
@@ -65,6 +51,20 @@ repos:
           - --config
           - .terraform-docs.yaml
           - modules/input/env_var
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs modules/input/kebab
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - modules/input/kebab
+        pass_filenames: false
+      - id: terraform-docs-docker
+        name: terraform docs modules/input/pascal
+        args:
+          - --config
+          - .terraform-docs.yaml
+          - modules/input/pascal
         pass_filenames: false
       - id: terraform-docs-docker
         name: terraform docs modules/input/snake

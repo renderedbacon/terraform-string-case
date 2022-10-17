@@ -1,6 +1,6 @@
 locals {
-  kebab = var.kebab
-  raw   = replace(lower(local.kebab), "_", " ")
+  env_var = var.env_var
+  raw     = replace(lower(local.env_var), "_", " ")
 }
 
 module "case" {

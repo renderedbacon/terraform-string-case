@@ -3,7 +3,7 @@ variable "camel" {
   type        = string
 
   validation {
-    condition     = length(replace(var.camel, "/[A-Za-z0-9]/", "")) > 0
+    condition     = length(replace(var.camel, "/[A-Za-z0-9]/", "")) == 0
     error_message = "Invalid character(s) for camel case string.  Please use only uppercase, lowercase, and numbers."
   }
 }

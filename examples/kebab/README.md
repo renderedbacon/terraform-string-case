@@ -13,6 +13,12 @@
 |------|--------|---------|
 | case | ../../modules/input/kebab | n/a |
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| kebab | Optional string to use as input. | `string` | `"simple-string-for-testing"` | no |
+
 ## Outputs
 
 | Name | Description |

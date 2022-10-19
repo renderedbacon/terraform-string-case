@@ -13,6 +13,12 @@
 |------|--------|---------|
 | case | ../../modules/input/pascal | n/a |
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| pascal | Optional string to use as input. | `string` | `"SimpleStringForTesting"` | no |
+
 ## Outputs
 
 | Name | Description |

@@ -13,6 +13,12 @@
 |------|--------|---------|
 | case | ../../ | n/a |
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| raw | Optional string to use as input. | `string` | `"Simple String for Testing"` | no |
+
 ## Outputs
 
 | Name | Description |

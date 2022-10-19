@@ -13,6 +13,12 @@
 |------|--------|---------|
 | case | ../../modules/input/snake | n/a |
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| snake | Optional string to use as input. | `string` | `"simple_string_for_testing"` | no |
+
 ## Outputs
 
 | Name | Description |

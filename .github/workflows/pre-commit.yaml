@@ -33,7 +33,7 @@ jobs:
       - name: Go Tidy Test Module
         run: |
           cd test
-          go tidy
+          go mod tidy
 
       - name: Pre-commit Terraform ${{ steps['min-max'].outputs.maxVersion }}
         uses: clowdhaus/terraform-composite-actions/pre-commit@v1.6.0

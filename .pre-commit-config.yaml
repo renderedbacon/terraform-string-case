@@ -9,6 +9,11 @@ repos:
     hooks:
       - id: checkov
         name: checkov
+  - repo: https://github.com/tekwizely/pre-commit-golang
+    rev: v1.0.0-beta.5
+    hooks:
+      - id: go-test-repo-mod
+        name: terratest unit tests
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.76.0
     hooks:

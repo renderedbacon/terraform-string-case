@@ -13,6 +13,12 @@
 |------|--------|---------|
 | case | ../../modules/input/camel | n/a |
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| camel | Optional string to use as input. | `string` | `"simpleStringForTesting"` | no |
+
 ## Outputs
 
 | Name | Description |

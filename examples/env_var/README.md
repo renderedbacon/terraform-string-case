@@ -13,6 +13,12 @@
 |------|--------|---------|
 | case | ../../modules/input/env_var | n/a |
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| env\_var | Optional string to use as input. | `string` | `"SIMPLE_STRING_FOR_TESTING"` | no |
+
 ## Outputs
 
 | Name | Description |

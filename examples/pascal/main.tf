@@ -1,4 +1,4 @@
 module "case" {
   source = "../../modules/input/pascal"
-  pascal = "SimpleStringForTesting"
+  pascal = var.pascal
 }

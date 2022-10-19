@@ -1,4 +1,4 @@
 module "case" {
   source = "../../modules/input/camel"
-  camel  = "simpleStringForTesting"
+  camel  = var.camel
 }

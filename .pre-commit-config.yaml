@@ -9,6 +9,8 @@ repos:
     hooks:
       - id: checkov
         name: checkov
+        args:
+          - -ogithub_failed_only
   - repo: https://github.com/tekwizely/pre-commit-golang
     rev: v1.0.0-beta.5
     hooks:

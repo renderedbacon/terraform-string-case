@@ -5,7 +5,7 @@ repos:
       - id: copy-root-outputs
       - id: update-tf-docs
   - repo: https://github.com/bridgecrewio/checkov
-    rev: 2.1.269
+    rev: 2.2.172
     hooks:
       - id: checkov
         name: checkov

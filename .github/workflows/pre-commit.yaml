@@ -36,6 +36,6 @@ jobs:
           go mod tidy
 
       - name: Pre-commit Terraform ${{ steps['min-max'].outputs.maxVersion }}
-        uses: clowdhaus/terraform-composite-actions/pre-commit@v1.8.3
+        uses: clowdhaus/terraform-composite-actions/pre-commit@v1.11.1
         with:
           terraform-version: ${{ steps['min-max'].outputs.maxVersion }}
